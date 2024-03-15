@@ -828,7 +828,24 @@ Option.AutoButtonColor = false
                 end) -- droplist ended
             end
         end
-        --
+
+    ButtonOpen.Text = "Open"
+    ButtonOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
+    ButtonOpen.TextSize = 14.000
+
+
+    local function ToggleWindow()
+        isOpen = not isOpen
+        Frame.Visible = isOpen
+    end
+
+    ButtonOpen.MouseButton1Click:Connect(ToggleWindow)
+
+
+    DestroyYep()
+
+    wait(0.069)
+
         return PageElements
     end
     return PageYep
